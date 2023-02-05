@@ -1,0 +1,51 @@
+<div class="flex_container">
+    <div class="card text-bg-dark" style="width: 400px;">
+        <div class="card-body">
+            <h5 class="card-title text-center">Rocket information - actualizacion</h5>
+            <form #form="ngForm" (ngSubmit)="update()">
+                <div class="form-floating m-3">
+                    <input type="number" class="form-control text-bg-dark" id="floatingInput" placeholder="id" [(ngModel)]="rocket.id" name="id">
+                    <label for="floatingInput">Id</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control text-bg-dark" id="floatingInput" placeholder="Nombre" [(ngModel)]="rocket.name" name="name">
+                    <label for="floatingInput">Nombre</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control text-bg-dark" id="floatingInput" placeholder="Descripcion" [(ngModel)]="rocket.description" name="description" required>
+                    <label for="floatingInput">Descripcion</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="number" class="form-control text-bg-dark" id="floatingInput" placeholder="altura" [(ngModel)]="rocket.height" name="height">
+                    <label for="floatingInput">Altura</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control text-bg-dark" id="floatingInput" placeholder="pais" [(ngModel)]="rocket.country" name="country">
+                    <label for="floatingInput">Pais</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control text-bg-dark" id="floatingInput" placeholder=" URL Imagen" required [(ngModel)]="rocket.flickr_images[0]" name="imagen1">
+                    <label for="floatingInput">URL Imagen (url de ejemplo, es un leon)</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control text-bg-dark" id="floatingInput" placeholder="URL Imagen opcional" required [(ngModel)]="rocket.flickr_images[1]" name="imagen2">
+                    <label for="floatingInput">URL Imagen opcional</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control text-bg-dark" id="floatingInput" placeholder="URL Imagen opcional" required [(ngModel)]="rocket.flickr_images[2]" name="imagen3">
+                    <label for="floatingInput">URL Imagen opcional</label>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-outline-success">Actualizar</button>
+                    </div>
+                    <div class="col text-center">
+                        <button class="btn btn-outline-danger">Descartar</button>
+                    </div>
+                </div>
+            </form>            
+            
+        </div>
+
+    </div>
+</div>
